@@ -648,6 +648,7 @@ app.post("/chat", verifyToken, async (req, res) => {
         "INSERT INTO messages (conversation_id, sender_role, message_text) VALUES ($1,$2,$3)",
         [conversation_id, "assistant", greeting]
       );
+      return res.json({ reply: greeting, conversation_id, image_type: null });
     }
 
     // ── Load conversation history ─────────────────────────────────────────────
