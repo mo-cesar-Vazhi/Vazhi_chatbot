@@ -507,7 +507,7 @@ async function detectImageType(image) {
   return response.output_text.trim().toLowerCase();
 }
 
-// ─── HEALTH CHECK ─────────────────────────────────────────────────────────────
+
 
 app.get("/", (req, res) => {
   res.json({ status: "Vaazi AI server running" });
