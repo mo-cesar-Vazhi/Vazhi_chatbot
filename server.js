@@ -513,7 +513,7 @@ app.get("/", (req, res) => {
   res.json({ status: "Vaazi AI server running" });
 });
 
-// ─── AUTH: REGISTER ───────────────────────────────────────────────────────────
+
 
 app.post("/auth/register", async (req, res) => {
   try {
