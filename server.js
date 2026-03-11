@@ -643,7 +643,7 @@ app.post("/chat", verifyToken, async (req, res) => {
       );
 
       // Store greeting as first assistant message
-      const greeting = "Type **Hi** to start the conversation 👋";
+      const greeting = `👋 Type **Hi** to start the conversation!\n\n⚠️ **Disclaimer:** I provide general information only — not medical diagnosis or treatment. Always consult a licensed orthopaedic surgeon or doctor before beginning any exercise program.`;
       await pool.query(
         "INSERT INTO messages (conversation_id, sender_role, message_text) VALUES ($1,$2,$3)",
         [conversation_id, "assistant", greeting]
