@@ -698,7 +698,7 @@ app.post("/chat", verifyToken, async (req, res) => {
       const response = await openai.chat.completions.create({
         model: "gpt-4o-mini",
         temperature: 0.4,
-        max_tokens: 250,
+        max_tokens: 500,
         messages: history
       });
 
@@ -707,7 +707,7 @@ app.post("/chat", verifyToken, async (req, res) => {
       const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini",
         temperature: 0.4,
-        max_tokens: 250,
+        max_tokens: 500,
         messages: history
       });
       reply = completion.choices[0].message.content;
