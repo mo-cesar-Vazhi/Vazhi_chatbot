@@ -25,7 +25,7 @@
 // });
 
 // const systemPrompt = `
-// You are VAAZI AI, a junior orthopaedic consultation assistant for a licensed orthopaedic organisation.
+// You are vazI AI, a junior orthopaedic consultation assistant for a licensed orthopaedic organisation.
 
 // Chat Rule
 // in the very begining of the converastion display a message to user to type "Hi" or "Hello" to start the consultation. Do not proceed with any questions until user greets you. If user sends any message without greeting, reply with:
@@ -34,7 +34,7 @@
 
 // Begin every new conversation with:
 
-// Hello! I'm Vaazi AI, your orthopaedic assistant. I'm here to help you with movement-based guidance and connect you with our orthopaedic specialists.
+// Hello! I'm vazi AI, your orthopaedic assistant. I'm here to help you with movement-based guidance and connect you with our orthopaedic specialists.
 
 // ⚠️ Disclaimer: I provide general information only — not medical diagnosis or treatment. Always consult a licensed orthopaedic surgeon or doctor before beginning any exercise program.
 
@@ -88,7 +88,7 @@
 
 // If asked about medication say:
 
-// "I'm Vaazi AI, an orthopaedic assistant. I can only provide movement-based guidance. For medication-related queries, please consult a licensed physician."
+// "I'm vazi AI, an orthopaedic assistant. I can only provide movement-based guidance. For medication-related queries, please consult a licensed physician."
 
 // Never diagnose medical conditions.
 // always check the mobile number should be of 10 digits and should be numeric.
@@ -156,7 +156,7 @@
 
 
 // app.get("/", (req, res) => {
-//   res.json({ status: "Vaazi AI server running" });
+//   res.json({ status: "vazi AI server running" });
 // });
 
 
@@ -360,8 +360,10 @@
 // const PORT = process.env.PORT || 3000;
 
 // app.listen(PORT, () => {
-//   console.log(`Vaazi AI chatbot running on port ${PORT}`);
+//   console.log(`vazi AI chatbot running on port ${PORT}`);
 // });
+
+
 
 
 
@@ -394,7 +396,7 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
-const JWT_SECRET = process.env.JWT_SECRET || "vaazi_secret_key_2024";
+const JWT_SECRET = process.env.JWT_SECRET || "vazi_secret_key_2024";
 
 // ─── JWT MIDDLEWARE ───────────────────────────────────────────────────────────
 
@@ -416,7 +418,7 @@ function verifyToken(req, res, next) {
 
 function buildSystemPrompt(userName) {
   return `
-You are VAAZHI AI, a junior orthopaedic consultation assistant for a licensed orthopaedic organisation.
+You are VAZHI AI, a junior orthopaedic consultation assistant for a licensed orthopaedic organisation.
 
 INTRODUCTION
 
@@ -476,7 +478,7 @@ Never recommend medication.
 
 If asked about medication say:
 
-"I'm VaazHi AI, an orthopaedic assistant. I can only provide movement-based guidance. For medication-related queries, please consult a licensed physician."
+"I'm vazHi AI, an orthopaedic assistant. I can only provide movement-based guidance. For medication-related queries, please consult a licensed physician."
 
 Never diagnose medical conditions.
 
@@ -518,7 +520,7 @@ async function detectImageType(image) {
 
 
 app.get("/", (req, res) => {
-  res.json({ status: "Vaazi AI server running" });
+  res.json({ status: "vazi AI server running" });
 });
 
 
@@ -740,5 +742,5 @@ app.post("/chat", verifyToken, async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Vaazi AI chatbot running on port ${PORT}`);
+  console.log(`vazi AI chatbot running on port ${PORT}`);
 });
